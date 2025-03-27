@@ -1,3 +1,7 @@
+NAMA: RIZQI CAHYANI PUTRI NASRUL
+
+NIM: 232410101003
+
 # Tugas 1 PWEB
 
 ## Deskripsi Proyek
