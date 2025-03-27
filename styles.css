@@ -1,0 +1,141 @@
+/* 🔹 Reset Default */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* 🔹 Banner Diperbesar */
+.banner {
+    background-color: #ff6600;
+    padding: 40px 20px; /* Perbesar padding agar banner lebih besar */
+}
+
+.banner img {
+    max-width: 200px; /* Perbesar ukuran gambar banner */
+    height: auto;
+}
+
+/* 🔹 Navbar */
+.navbar {
+    background-color: #ff9900;
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+/* 🔹 Efek Hover pada Navbar */
+.navbar a:hover {
+    color: #ff6600; /* Warna berubah saat hover */
+}
+
+/* 🔹 Underline Animasi saat Hover */
+.navbar a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: white;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* 🔹 Produk, Video, Resep */
+.products, .videos, .recipes, .get-social {
+    padding: 20px;
+}
+
+.product-list, .video-list, .recipe-list, .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Agar responsif */
+}
+
+/* 🔹 Ukuran Gambar Produk & Resep */
+.product-list img, .recipe-list img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🔹 Efek Hover pada Produk */
+.product-list img:hover, .recipe-list img:hover {
+    transform: scale(1.05); /* Membesar saat hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Ukuran Video */
+.video-list iframe {
+    width: 300px;
+    height: 200px;
+}
+
+/* 🔹 Ukuran "Get Social" lebih kecil */
+.get-social {
+    text-align: center;
+    background-color: #ff6600;
+    padding: 20px;
+    color: white;
+}
+
+.get-social h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* 🔹 Ikon Sosial Media lebih kecil */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a img {
+    width: 40px; /* Ukuran proporsional */
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+/* 🔹 Responsif: Mobile */
+@media (max-width: 768px) {
+    .product-list, .video-list, .recipe-list, .social-icons {
+        flex-direction: column;
+    }
+
+    .banner img {
+        width: 100%;
+    }
+}
